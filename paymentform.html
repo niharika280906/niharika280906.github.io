@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 20px;
+    }
+
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: green;
+      text-align: center;
+    }
+
+    h2 {
+      color: red;
+      font-family: 'Poetsen One', sans-serif;
+      margin-top: 30px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+      background-color: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: darkgreen;
+    }
+
+    .required {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <h1>PAYMENT FORM</h1>
+    <p>Required fields are marked with <span class="required">*</span></p>
+
+    <h2>Contact Info</h2>
+
+    <label for="name">Name <span class="required">*</span></label>
+    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+
+    <fieldset>
+      <legend>Gender</legend>
+      <input type="radio" name="gender" id="male" value="male">
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="female" value="female">
+      <label for="female">Female</label>
+    </fieldset>
+
+    <label for="address">Address</label>
+    <textarea name="address" id="address" cols="30" rows="4" placeholder="Enter your address"></textarea>
+
+    <label for="email">Email <span class="required">*</span></label>
+    <input type="email" name="email" id="email" placeholder="you@example.com" required>
+
+    <label for="pincode">Pincode</label>
+    <input type="number" name="pincode" id="pincode" placeholder="123456">
+
+    <h2>Payment Info</h2>
+
+    <label for="card_type">Card Type</label>
+    <select name="card_type" id="card_type">
+      <option value="">-- Select a card type --</option>
+      <option value="visa">Visa</option>
+      <option value="rupay">Rupay</option>
+      <option value="mastercard">Mastercard</option>
+    </select>
+
+    <label for="card_no">Card Number <span class="required">*</span></label>
+    <input type="number" name="card_no" id="card_no" placeholder="1111-2222-3333-4444" required>
+
+    <label for="exp_date">Expiration Date <span class="required">*</span></label>
+    <input type="date" name="exp_date" id="exp_date" required>
+
+    <label for="cvv">CVV <span class="required">*</span></label>
+    <input type="password" name="cvv" id="cvv" placeholder="123" required>
+
+    <input type="submit" value="Pay Now">
+  </form>
+
+</body>
+</html>
